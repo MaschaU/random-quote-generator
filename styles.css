@@ -1,3 +1,22 @@
-* {
+body {
     background-color: tomato;
+}
+
+#wrapper {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+}
+
+#quote-box, #quote-text {
+    width: 90%;
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#quote-text {
+    width: 80%;
+    height: 50%;
 }
