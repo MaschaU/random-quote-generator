@@ -1,1 +1,3 @@
-console.log("Am I linked or what!?! Linked ftw!");
+document.getElementById("new-quote").addEventListener("click", function (e) {
+    console.log("BANG!!");
+});
