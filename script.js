@@ -22,7 +22,16 @@ $(document).ready(function() {
     // console.log("Something's working");
     // once the document is ready, select the button and attach the click handler
     // pass the changeBackgrounColor function to the click handler
-    $("#new-quote").click(changeBackgroundColor);
+    $("#new-quote").click(function() {
+        changeBackgroundColor();
+        $.getJSON("./quotes.json", function(data) { 
+            $("#quote-text").html('"' + data.quotes[0].quote + '"');
+            $("#author").html("- " + data.quotes[0].author);
+            
+            newQuote = data.quoteText;
+        });
+
+    });
     // call the changeBackground function when the document is ready
     changeBackgroundColor(); 
 });
@@ -31,17 +40,6 @@ $(document).ready(function() {
 
 
 
-
-
-// $("#newQuote").click(function() {      
-//     $.getJSON("text/quotes.json", function(responseText) { 
-      
-//       $("#quoteText").html('"' + responseText.quoteText + '"');
-//       $("#author").html("- " + responseText.quoteAuthor);
-      
-//       newQuote = responseText.quoteText;
-//   });                    
-// });
                             
     
 
