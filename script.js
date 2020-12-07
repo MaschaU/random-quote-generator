@@ -24,6 +24,10 @@ $(document).ready(function() {
     // pass the changeBackgrounColor function to the click handler
     $("#new-quote").click(function() {
         changeBackgroundColor();
+
+        // needs to run on a server, otherwise json file will not load
+        // see README.md
+        // for data structure, see quotes.json
         $.getJSON("./quotes.json", function(data) { 
             $("#quote-text").html('"' + data.quotes[0].quote + '"');
             $("#author").html("- " + data.quotes[0].author);
