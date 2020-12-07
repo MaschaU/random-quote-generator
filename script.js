@@ -178,3 +178,31 @@ function getNewColor() {
     }
     return color;
 }
+
+function changeBackgroundColor() {
+    var newColor = getNewColor();
+    $("body").css("background-color", newColor);
+  }
+  
+function newQuote() {
+    changeBackgroundColor();
+  
+    // Math.random gives a float number from 0 to 1
+    // we're multiplying with the max number available
+    // using Math.floor to ensure an integer that is less than quotes.length-1,
+    // because quotes.length wouldn't be a valid index
+    var randomIndex = Math.floor(Math.random() * quotes.length);
+ 
+
+    $("#text").html(`"${quotes[randomIndex].quote}"`);
+    $("#author").html(`${quotes[randomIndex].author}`);
+    $("#tweet-quote").attr( "href", `https://twitter.com/intent/tweet?text=${quotes[randomIndex].quote}`) 
+}
+
+$(document).ready(function () {
+    // console.log("Something's working");
+    // once the document is ready, select the button and attach the click handler
+    // pass the changeBackgrounColor function to the click handler
+    $("#new-quote").click(newQuote);
+    newQuote();
+  });

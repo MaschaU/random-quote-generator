@@ -1,22 +1,30 @@
 body {
-    background-color: tomato;
+    margin: 0;
+    padding: 0;
 }
 
 #wrapper {
     width: 50%;
-    margin-left: auto;
+    margin: auto;
     margin-right: auto;
+    margin-top: 15%;
     border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
 }
 
-#quote-box, #quote-text {
-    width: 90%;
-    border: 2px solid black;
-    margin-left: auto;
+.quote-author {
+    margin: auto;
     margin-right: auto;
 }
 
-#quote-text {
-    width: 80%;
-    height: 50%;
+img {
+    height: 30px;
+    width: 30px;
+}
+
+#new-quote {
+    float: right;
 }
