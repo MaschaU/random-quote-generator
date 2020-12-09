@@ -184,6 +184,7 @@ function changeBackgroundColor() {
     $("body").css("background-color", newColor);
     $("#text").css("color", newColor);
     $("#author").css("color", newColor);
+    $("#new-quote").css("background-color", newColor);
 }
   
 function newQuote() {
