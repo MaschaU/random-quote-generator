@@ -182,7 +182,9 @@ function getNewColor() {
 function changeBackgroundColor() {
     var newColor = getNewColor();
     $("body").css("background-color", newColor);
-  }
+    $("#text").css("color", newColor);
+    $("#author").css("color", newColor);
+}
   
 function newQuote() {
     changeBackgroundColor();

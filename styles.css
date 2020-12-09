@@ -9,10 +9,10 @@ body {
     margin-right: auto;
     margin-top: 15%;
     border: 2px solid black;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
-    background-color: black;
-    color: white;
+    background-color: white;
 }
 
 .quote-author {
